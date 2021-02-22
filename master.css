@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+	--font-base: lato;
+	--card-gap: 2rem; /* Separación entre tarjetas */
+	--card-width: 27rem;
+	--card-height: 40rem;
+	--card-type-width: 6rem;
+	--card-type1-color: blue;
+	--card-type2-color: red;
+	--card-type3-color: purple;
+	--card-type3-color: green;
+}
+
+.card {
+	transition: all .3s ease;
+}
+.card:hover {
+	filter: brightness(1.3);
+	transform: rotateZ(3deg) scale(1.05);
+}
+
+.card__type--1{
+	background: linear-gradient(to top, blue, skyblue, white);
+  box-shadow: 0 0 2rem blue;
+}
+.card__type--2{
+	background: linear-gradient(to top, red, orange, white);
+  box-shadow: 0 0 2rem red;
+}
+.card__type--3{
+	background: linear-gradient(to top, purple, blue, pink);
+  box-shadow: 0 0 2rem green;
+}
+.card__type--4{
+	background: linear-gradient(to top, green, darkgreen, white);
+}
+
+.cont {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: var(--card-width);
+  height: var(--card-height);
+  margin: var(--card-gap);
+  color: white;
+}
+
+.card, .type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.card-1 {
+  background-image: url(img/img1.jpg);
+  background-size: 300%;
+  background-position: center center;
+}
+
+.card-2 {
+  background-image: url(img/img2.png);
+  background-position: center;
+  background-size: 175%;
+}
+
+.card-3 {
+  background-image: url(img/img3.jpg);
+  background-position: 50% 50%;
+  background-size: 220%;
+}
+
+.card-4 {
+  background-image: url(img/img4.jpg);
+  background-position: 45% 40%;
+  background-size: 190%;
+}
+
+.power, .name {
+  text-transform: capitalize;
+}
+
+.power {
+  font-size: 1.75em;
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+.name {
+  display: flex;
+  font-size: 3.5em;
+  margin-top: 0.75em;
+  padding: 0.5em 0 0.5em 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  justify-content: center;
+}
+
+.type {
+  height: 6rem;
+  width: 6rem;
+  font-size: 2.5em;
+  border-radius: 50%;
+  align-self: flex-end;
+  margin: 0 0.5em 0.5em 0;
+  flex-direction: row;
+  justify-content: center;
+  text-transform: uppercase;
+}
